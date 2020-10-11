@@ -1,0 +1,450 @@
+/*----------------------------------------*/
+/* Body
+/*----------------------------------------*/
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+body:after{
+    content: "";
+    background-image: url('../images/37.jpg');
+    background-repeat: repeat;
+    background-size: 50%;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+}
+
+/*----------------------------------------*/
+/* Form
+/*----------------------------------------*/
+
+label{
+    display: inline-block;
+    width: 100%;
+    font-family: 'roboto', 'sans-serif';
+    font-size: 0.8em;
+    color: #333333;
+    opacity: 0.75;
+    margin-bottom: 2px;
+    transition: all .2s ease-in-out;
+}
+
+input, textarea, form{
+    box-sizing : border-box;
+    font-family: 'roboto', 'sans-serif';
+}
+
+input, textarea{
+    width: 100%;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    padding: 3px 0;
+}
+
+.fieldset{
+    margin-top: 25px;
+    padding: 3px 5px;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0);
+
+}
+
+.fieldset::after{
+    position: absolute;
+    bottom: 0;
+    content:"";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: 1px;
+    background: #eeeeee;
+    z-index: -1;
+}
+
+.fieldset.focused{
+    border: 1px solid #00B4FF;
+}
+
+.fieldset.focused label{
+    color: #00B4FF;
+    transition: all .2s ease-in-out;
+}
+
+input[type="submit"]{
+    margin-top: 25px;
+    font-family: 'roboto', 'sans-serif';
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    background: rgb(0,180,255);
+    background: linear-gradient(133deg, rgba(0,180,255,1) 0%, rgba(0,104,255,1) 100%);
+    color: white;
+    border-radius: 2px;
+    padding: 0.75em 1.75em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+
+}
+
+.form_container{
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5em;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
+    border-top-right-radius: 30px;
+    margin: auto;
+    background: rgb(255,255,255);
+    background: linear-gradient(148deg, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+    border-top: 7px solid #00B4FF;
+    box-sizing: border-box;
+    z-index: 2;
+    min-height: calc(60vh + 50px);
+    position: absolute;
+    bottom: 0;
+}
+
+/*----------------------------------------*/
+/* Form Head
+/*----------------------------------------*/
+
+.form_head{
+    padding-bottom: 17px;
+    position: relative;
+    display: flex;
+    margin-bottom: 17px;
+}
+
+.form_head::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 1px;
+    background: #f7f7f7;
+}
+
+.form_head img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.form_head .profile{
+    display: flex;
+}
+
+.form_head .profile .nametag{
+    margin-left: 20px;
+}
+
+.form_head h3{
+    font-family: 'roboto', 'sans-serif';
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    font-size: 20px;
+    color: #333333;
+
+}
+
+.form_head p{
+    font-family: 'roboto', 'sans-serif';
+    letter-spacing: 0.005em;
+    font-size: 14px;
+    color: #00B4FF;
+    margin-top: 4px;
+}
+
+.form_head svg{
+    fill: grey;
+    width: 17px;
+    height: 14px;
+
+}
+
+.message{
+    max-width: 80%;
+    margin: auto;
+}
+
+.message .error,
+.message .success{
+    padding: 14px 20px 14px 20px;
+    margin: 17px 0;
+    border-radius: 10px 2% 2% 10px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.125);
+    color: #131313;
+    font-family: 'roboto', 'sans-serif';
+    font-size: 0.8em;
+    line-height: 1.3em;
+    position: relative;
+
+}
+
+.message .error {
+    border-left: 3px #CC0000;
+}
+
+.message .success {
+    border-left: 3px #00BA0E;
+}
+
+.message .error svg,
+.message .success svg{
+    position: absolute;
+    right: -12px;
+    transform: translateY(50%);
+    bottom: 50%;
+}
+
+.message .success svg{
+    fill: #00BA0E;
+}
+
+.message .error svg{
+    fill: #CC0000;
+}
+
+
+.message .error h3,
+.message .success h3{
+    font-family: 'roboto', 'sans-serif';
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.message .success h3{
+    color:#00BA0E;
+
+}
+
+.message .success .b-date{
+    color: #000000;
+}
+
+
+.message .error h3{
+    color: #CC0000;
+}
+
+.message .error p,
+.message .success p{
+    color: #333333;
+    margin-top: 4px;
+}
+
+.message p svg{
+    fill: white;
+    width: 10px;
+    height: 10px;
+
+}
+
+.message .success{
+    border-left: solid 5px #25c455;
+
+}
+
+.message .error{
+    border-left: solid 5px #c42525;
+
+}
+
+.mq-icon{
+    background: rgba(0,180,255,1);
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    right: 24px;
+    border-radius: 5px;
+    top: -25px;
+}
+
+.mq-icon img{
+    fill: white;
+    padding: 3px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----------------------------------------*/
+/* Form Footer
+/*----------------------------------------*/
+
+.form-footer{
+    display: flex;
+    margin-top: 17px;
+}
+
+.form-footer a,
+.form-footer p{
+    display: inline-block;
+    color: #00B4FF;
+    text-decoration: none;
+    font-family: 'roboto', 'sans-serif';
+    font-size: 12px;
+}
+
+.form-footer p{
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.form-footer a{
+    border-radius: 10px;
+    border: solid 1px #eeeeee;
+    padding: 3px 20px 3px 7px;
+    position: relative;
+
+}
+
+.form-footer a span{
+    position: absolute;
+    right: 3px;
+    width: 12px;
+    height: 12px;
+    background: #00B4FF;
+    border-radius: 50%;
+}
+
+.form-footer a svg{
+    height: 7px;
+    width: 7px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*----------------------------------------*/
+/* Form Background
+/*----------------------------------------*/
+
+.background{
+    height: 100vh;
+    background: #DBA4AC;
+    position: relative;
+    width: 100%;
+    max-width: 425px;
+    margin: auto;
+    max-height: 1000px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25) !important;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 425px){
+    .background{
+        margin: 30px auto;
+    }
+}
+
+
+.bg-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    opacity: 0.07;
+    background-image: url('../images/miami-palm-trees.jpg');
+
+}
+
+.bg-section{
+    background: #DBA4AC;
+}
+
+.bg-section img{
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    z-index: -1;
+}
+
+/*----------------------------------------*/
+/* Calendar
+/*----------------------------------------*/
+
+.xdsoft_datepicker{
+    font-family: 'roboto', sans-serif;
+
+}
+.xdsoft_datetimepicker{
+    border: unset !important;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25) !important;
+    border-radius: 3px !important;
+
+} 
+
+.xdsoft_calendar th{
+    color: #363636;
+
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover,
+.xdsoft_datetimepicker .xdsoft_calendar td:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:active,
+.xdsoft_datetimepicker .xdsoft_calendar td:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:focus {
+    background: #00B4FF !important;
+
+}
+
+
+
+.xdsoft_label{
+    color: grey;
+    text-align: center !important;
+
+}
+
+.xdsoft_label > span{
+    text-decoration: none !important;
+}
+
+.xdsoft_scrollbar{
+    width: 3.5px !important;
+
+}
+
+.xdsoft_datepicker button{
+    font-family: 'roboto', sans-serif;
+
+}
+.xdsoft_current{
+    background: #00B4FF !important;
+    color: white !important;
+    border: solid 1px #00B4FF;
+}
+
+.xdsoft_today{
+    background: #f7f7f7;
+}
+
+/* .xdsoft_time.disabled{
+    display: none !important;
+} */
