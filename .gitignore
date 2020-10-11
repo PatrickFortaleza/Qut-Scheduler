@@ -2,3 +2,4 @@ credentials.json
 .DS*
 ./node_modules
 dates.json
+token.json
