@@ -184,7 +184,7 @@ input[type="submit"]{
 }
 
 .message{
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
 }
 
@@ -240,7 +240,7 @@ input[type="submit"]{
 }
 
 .message .success .b-date{
-    color: #000000;
+    color: #00BA0E;
 }
 
 
@@ -250,7 +250,7 @@ input[type="submit"]{
 
 .message .error p,
 .message .success p{
-    color: #333333;
+    color: #ffffff;
     margin-top: 4px;
 }
 
