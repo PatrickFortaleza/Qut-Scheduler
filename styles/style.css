@@ -8,6 +8,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     position: relative;
+    background: #121212;
 }
 
 body:after{
@@ -15,7 +16,7 @@ body:after{
     background-image: url('../images/37.jpg');
     background-repeat: repeat;
     background-size: 50%;
-    opacity: 0.1;
+    opacity: 0.05;
     top: 0;
     left: 0;
     bottom: 0;
@@ -33,7 +34,7 @@ label{
     width: 100%;
     font-family: 'roboto', 'sans-serif';
     font-size: 0.8em;
-    color: #333333;
+    color: #d0d0d0;
     opacity: 0.75;
     margin-bottom: 2px;
     transition: all .2s ease-in-out;
@@ -47,6 +48,7 @@ input, textarea, form{
 input, textarea{
     width: 100%;
     border:none;
+    color: white;
     background-image:none;
     background-color:transparent;
     -webkit-box-shadow: none;
@@ -74,7 +76,7 @@ input, textarea{
     transform: translateX(-50%);
     width: 98%;
     height: 1px;
-    background: #eeeeee;
+    background: #333333;
     z-index: -1;
 }
 
@@ -111,8 +113,8 @@ input[type="submit"]{
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.25);
     border-top-right-radius: 30px;
     margin: auto;
-    background: rgb(255,255,255);
-    background: linear-gradient(148deg, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
+    background: #121212;
+    background: linear-gradient(193deg, rgba(38,38,38,1) 0%, rgba(4,4,4,1) 100%);
     border-top: 7px solid #00B4FF;
     box-sizing: border-box;
     z-index: 2;
@@ -162,7 +164,7 @@ input[type="submit"]{
     font-weight: 700;
     letter-spacing: 0.01em;
     font-size: 20px;
-    color: #333333;
+    color: white;
 
 }
 
@@ -315,7 +317,7 @@ input[type="submit"]{
 
 .form-footer a{
     border-radius: 10px;
-    border: solid 1px #eeeeee;
+    border: solid 1px #333333;
     padding: 3px 20px 3px 7px;
     position: relative;
 
