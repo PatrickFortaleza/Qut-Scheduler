@@ -86,8 +86,8 @@ $date_hr = date("H", $date);
 $date_human = date("l, F j, Y \a\\t h:i a", $date); //unix date to human readable form
 echo $date_human.' -  human<br/>';
 $date_after = $date + 3600; //add 60 minutes in unix
-$date = date("Y-m-d\TH:i:s-08:00", $date); // format date to match dateTime (Google API)
-$date_after = date("Y-m-d\TH:i:s-08:00", $date_after); //unix to date
+$date = date("Y-m-d\TH:i:s-07:00", $date); // format date to match dateTime (Google API)
+$date_after = date("Y-m-d\TH:i:s-07:00", $date_after); //unix to date
 
 // create dateobject with date_mdy and date_hr
 $dateObjPayload = array('date' => $date_mdy, 'hours' => $date_hr); 
